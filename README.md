@@ -59,7 +59,7 @@ Foi gravado um vídeo demonstrando o funcionamento do protótipo & explicando o 
 
 ---
 
-## Entrega 03
+# Entrega 03
 
 Nesta entrega foram desenvolvidas novas funcionalidades do sistema CyberGuard, incluindo: a implementação de mais três histórias de usuário, atualização do ambiente de versionamento, adicionamos um novo screencast do sistema em funcionamento e outro screencast da execução dos testes, issue / bug tracker atualizado no GitHub com registros no README e implementação de testes automatizados.
 
