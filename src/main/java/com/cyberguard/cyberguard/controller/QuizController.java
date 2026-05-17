@@ -31,7 +31,7 @@ public class QuizController {
 
     @PostMapping("/responder")
     public String responder(@RequestBody RespostaQuiz resposta, @RequestParam(required = false) String categoria) {
-        int pontos = service.corrigir(resposta.getRespostas(), categoria);
+        int pontos = service.corrigirESalvar(resposta.getRespostas(), categoria, resposta.getEmailUsuario());
         return "Pontuação: " + pontos;
     }
 }

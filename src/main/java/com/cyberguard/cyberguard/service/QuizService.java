@@ -2,13 +2,23 @@ package com.cyberguard.cyberguard.service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import com.cyberguard.cyberguard.entity.Pergunta;
+import com.cyberguard.cyberguard.entity.Usuario;
+import com.cyberguard.cyberguard.repository.UsuarioRepository;
 
 @Service
 public class QuizService {
+
+    private final UsuarioRepository usuarioRepository;
+
+    // Construtor com injeção de dependência do repositório
+    public QuizService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 
     public List<Pergunta> getPerguntas(String categoria) {
         if ("links".equalsIgnoreCase(categoria)) {
@@ -24,7 +34,6 @@ public class QuizService {
                 new Pergunta("Cartões virtuais são mais seguros para compras online únicas?", "sim", "Sim, pois você pode excluí-los após a compra, impedindo cobranças futuras indevidas.")
             );
         } else {
-            // Categoria padrão: Seguranca (id 1)
             return Arrays.asList(
                 new Pergunta("Phishing é um tipo de golpe para roubar dados?", "sim", "Exato. É uma 'pescaria' de informações confidenciais."),
                 new Pergunta("Uma senha forte deve ter pelo menos 12 caracteres?", "sim", "Quanto maior a senha, mais tempo levaria para um computador descobri-la por força bruta."),
@@ -33,7 +42,8 @@ public class QuizService {
         }
     }
 
-    public int corrigir(List<String> respostasUsuario, String categoria) {
+
+    public int corrigirESalvar(List<String> respostasUsuario, String categoria, String emailUsuario) {
         List<Pergunta> perguntas = getPerguntas(categoria);
         int pontuacao = 0;
         int numRespostas = Math.min(respostasUsuario.size(), perguntas.size());
@@ -44,6 +54,17 @@ public class QuizService {
                 pontuacao++;
             }
         }
+
+        // Se o email foi enviado, busca o usuário e atualiza os pontos
+        if (emailUsuario != null && !emailUsuario.isEmpty()) {
+            Optional<Usuario> usuarioOpt = usuarioRepository.findByEmail(emailUsuario);
+            if (usuarioOpt.isPresent()) {
+                Usuario usuario = usuarioOpt.get();
+                usuario.setPontuacao(usuario.getPontuacao() + pontuacao);
+                usuarioRepository.save(usuario);
+            }
+        }
+
         return pontuacao;
     }
 }

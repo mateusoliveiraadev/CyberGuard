@@ -1,11 +1,14 @@
 package com.cyberguard.cyberguard.repository;
 
-import com.cyberguard.cyberguard.entity.Usuario;
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import java.util.List;
 import java.util.Optional;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.cyberguard.cyberguard.entity.Usuario;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     Optional<Usuario> findByEmail(String email);
+    
+    List<Usuario> findTop10ByOrderByPontuacaoDesc();
 }
