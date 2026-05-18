@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard - Central de Denúncias</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; display: flex; justify-content: center; align-items: flex-start; }
+        .container { background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); width: 100%; max-width: 700px; padding: 40px; margin-top: 20px; position: relative; }
+        h2 { color: #333; margin-bottom: 30px; text-align: center; font-size: 28px; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #f0f0f0; }
+        .tab-btn { flex: 1; padding: 12px; background: none; border: none; color: #888; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab-btn.active { color: #667eea; border-bottom-color: #667eea; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: #555; font-weight: 600; font-size: 14px; }
+        input, textarea { width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 14px; font-family: inherit; }
+        textarea { min-height: 120px; resize: vertical; }
+        button { width: 100%; padding: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: transform 0.2s; }
+        button:hover { transform: translateY(-2px); }
+        .denuncia-card { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #667eea; }
+        .denuncia-titulo { font-weight: 700; color: #333; margin-bottom: 5px; }
+        .denuncia-desc { color: #666; font-size: 14px; line-height: 1.5; }
+        .denuncia-data { font-size: 11px; color: #aaa; margin-top: 10px; text-align: right; }
+        .back-btn { display: inline-block; margin-bottom: 10px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; cursor: pointer; }
+        .back-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div style="width: 100%; max-width: 700px;">
+    <div class="back-btn" onclick="window.location.href='index.html'">← Voltar ao Menu Principal</div>
+    <div class="container">
+        <h2>🚨 Central de Denúncias</h2>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('enviar')">Nova Denúncia</button>
+            <button class="tab-btn" onclick="switchTab('listar')">Ver Denúncias</button>
+        </div>
+
+        <div id="enviar" class="tab-content active">
+            <div class="form-group">
+                <label>Título da Ocorrência:</label>
+                <input type="text" id="titulo" placeholder="Ex: Tentativa de Phishing via WhatsApp">
+            </div>
+            <div class="form-group">
+                <label>Descrição Detalhada:</label>
+                <textarea id="descricao" placeholder="Descreva o que aconteceu..."></textarea>
+            </div>
+            <button onclick="enviarDenuncia()">Enviar Relato</button>
+        </div>
+
+        <div id="listar" class="tab-content">
+            <div id="listaDenuncias">Carregando...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchTab(tab) {
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(tab).classList.add('active');
+        event.currentTarget.classList.add('active');
+        if(tab === 'listar') carregarDenuncias();
+    }
+
+    async function enviarDenuncia() {
+        const d = { titulo: document.getElementById('titulo').value, descricao: document.getElementById('descricao').value };
+        if(!d.titulo || !d.descricao) { alert("Por favor, preencha todos os campos."); return; }
+        const r = await fetch('/denuncias', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) });
+        if(r.ok) { alert("Denúncia enviada com sucesso!"); switchTab('listar'); }
+    }
+
+    async function carregarDenuncias() {
+        const r = await fetch('/denuncias');
+        const dados = await r.json();
+        const lista = document.getElementById('listaDenuncias');
+        if(dados.length === 0) { lista.innerHTML = "<p style='text-align:center; color:#888;'>Nenhuma denúncia registrada.</p>"; return; }
+        lista.innerHTML = dados.map(d => `
+            <div class="denuncia-card">
+                <div class="denuncia-titulo">${d.titulo}</div>
+                <div class="denuncia-desc">${d.descricao}</div>
+                <div class="denuncia-data">${new Date(d.dataCriacao).toLocaleString()}</div>
+            </div>
+        `).sort((a, b) => b.id - a.id).join(''); // Mostra as mais recentes primeiro
+    }
+</script>
+</body>
+</html>
