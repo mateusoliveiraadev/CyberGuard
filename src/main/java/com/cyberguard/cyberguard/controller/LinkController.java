@@ -12,7 +12,7 @@ import com.cyberguard.cyberguard.entity.LinkRequest;
 import com.cyberguard.cyberguard.entity.LinkResponse;
 import com.cyberguard.cyberguard.service.LinkService;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/links")
 public class LinkController {
