@@ -107,9 +107,11 @@ Nesta entrega implementamos mais duas histórias ao sistema CyberGuard, nela est
 
 🦠 Issue / Bug tracker: 
 
-<img width="1179" height="1035" alt="WhatsApp Image 2026-05-18 at 11 44 34 PM" src="https://github.com/user-attachments/assets/3971f85f-02b0-4e2c-a2a0-99062c11d528" />
+<img width="1179" height="1035" alt="WhatsApp Image 2026-05-18 at 11 44 34 PM" src="https://github.com/user-attachments/assets/3971f85f-02b0-4e2c-a2a0-99062c11d528" />**
 
-Guia completo de como rodar o projeto: 
+
+
+**Passo a passo para rodar o projeto**: 
 [Guia completo – Como rodar o projeto CyberGuard no VS Code_.pdf](https://github.com/user-attachments/files/27982306/Guia.completo.Como.rodar.o.projeto.CyberGuard.no.VS.Code_.pdf)
 
 ## 1. Screencast da execução de testes
