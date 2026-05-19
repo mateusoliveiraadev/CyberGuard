@@ -85,11 +85,35 @@ Nesta entrega foram desenvolvidas novas funcionalidades do sistema CyberGuard, i
 
 Foi gravado um vídeo demonstrando o funcionamento do protótipo 
 
-▶️ Assistir no Youtube: 
+▶️ Assistir no Youtube: https://youtu.be/9uRgIeT_0Dw?si=cixpiOA5TUA2hFft
 
-## 2. Screencast da execução de testes
+
+# Entrega 04
+
+Nesta entrega implementamos mais duas histórias ao sistema CyberGuard, nela está inclusa: a implementação de verificação de link maliciosos, aonde o usuário insere um link em nossa barra de busca e o nosso sistema identifica se o link é falso ou verdadeiro. E Também implementamos a funcionalidade onde agora é póssivel visualizar o ranking do nosso quiz. E por fim fizemos atualizações do ambiente de versionamento, adicionamos um novo screencast do sistema em funcionamento e outro screencast da execução dos testes, issue / bug tracker atualizado no GitHub com registros no README e implementação de testes automatizados.
+
+### Itens Entregues:
+*   **Implementação de +2 histórias do usuário**: 
+    - **Visualização do Ranking**: Interface aonde o usuário pode acompanhar o desempenho dele no quiz e comparar-se com outros usuários.
+    - **Verificação de links**: Sistema que permite que o usuário insira um link, para saber se aquele site é verdadeiro ou falso.
+       
+*   **Screencast do sistema funcionando**: Demonstração das novas funcionalidades e do fluxo de navegação na parte de verificação de links.
+*   **Screencast da execução dos testes**: Vídeo mostrando a validação das novas histórias de usuário e testes de navegação.
+*   **Issue / bug tracker atualizado**: Registro e acompanhamento de melhorias diretamente no GitHub.
+
+📄 **Documento com as histórias**:
+[https://www.notion.so/User-Stories-POO-CyberGuard-325fb994f323806db057d7846308a6c1?source=copy_link](https://www.notion.so/User-Stories-POO-CyberGuard-325fb994f323806db057d7846308a6c1?source=copy_link )
+
+🦠 Issue / Bug tracker: 
+
+<img width="1179" height="1085" alt="WhatsApp Image 2026-05-18 at 9 46 21 PM" src="https://github.com/user-attachments/assets/4ca0c86c-aead-4736-8352-28bcd4ec34e4" />
+
+
+
+## 1. Screencast da execução de testes
 
 Foi gravado um vídeo executando alguns testes dentro do protótipo 
 
-▶️ Assistir no Youtube:  
+▶️ Assistir no Youtube: https://youtu.be/BMfXCID5HsY?si=WMAuHpApmhG0RR_7
+
 
