@@ -70,7 +70,6 @@ Nesta entrega foram desenvolvidas novas funcionalidades do sistema CyberGuard, i
     - **Visualização de Denúncias**: Central onde o usuário pode consultar todos os relatos registrados no sistema, com data e hora.
        
 *   **Screencast do sistema funcionando**: Demonstração das novas funcionalidades e do fluxo de navegação entre Quiz e Denúncias.
-*   **Screencast da execução dos testes**: Vídeo mostrando a validação das novas histórias de usuário e testes de navegação.
 *   **Issue / bug tracker atualizado**: Registro e acompanhamento de melhorias diretamente no GitHub.
 
 📄 **Documento com as histórias**:
@@ -98,7 +97,6 @@ Nesta entrega implementamos mais duas histórias ao sistema CyberGuard, nela est
     - **Visualização do Ranking**: Interface aonde o usuário pode acompanhar o desempenho dele no quiz e comparar-se com outros usuários.
     - **Verificação de links**: Sistema que permite que o usuário insira um link, para saber se aquele site é verdadeiro ou falso.
        
-*   **Screencast do sistema funcionando**: Demonstração das novas funcionalidades e do fluxo de navegação na parte de verificação de links.
 *   **Screencast da execução dos testes**: Vídeo mostrando a validação das novas histórias de usuário e testes de navegação.
 *   **Issue / bug tracker atualizado**: Registro e acompanhamento de melhorias diretamente no GitHub.
 
