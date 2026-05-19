@@ -64,10 +64,9 @@ Foi gravado um vídeo demonstrando o funcionamento do protótipo & explicando o 
 Nesta entrega foram desenvolvidas novas funcionalidades do sistema CyberGuard, incluindo: a implementação de mais três histórias de usuário, atualização do ambiente de versionamento, adicionamos um novo screencast do sistema em funcionamento e outro screencast da execução dos testes, issue / bug tracker atualizado no GitHub com registros no README e implementação de testes automatizados.
 
 ### Itens Entregues:
-*   **Implementação de +3 histórias do usuário**: 
+*   **Implementação de +2 histórias do usuário**: 
     - **Quiz Educativo Interativo**: Sistema com 10 perguntas, feedback visual imediato (verde/vermelho) e explicações técnicas para cada resposta.
-    - **Registro de Denúncias**: Interface para que o usuário possa relatar crimes cibernéticos com título e descrição detalhada.
-    - **Visualização de Denúncias**: Central onde o usuário pode consultar todos os relatos registrados no sistema, com data e hora.
+    - **Visualização do Ranking**: Interface aonde o usuário pode acompanhar o desempenho dele no quiz e comparar-se com outros usuários.
        
 *   **Screencast do sistema funcionando**: Demonstração das novas funcionalidades e do fluxo de navegação entre Quiz e Denúncias.
 *   **Issue / bug tracker atualizado**: Registro e acompanhamento de melhorias diretamente no GitHub.
@@ -93,9 +92,10 @@ Foi gravado um vídeo demonstrando o funcionamento do protótipo
 Nesta entrega implementamos mais duas histórias ao sistema CyberGuard, nela está inclusa: a implementação de verificação de link maliciosos, aonde o usuário insere um link em nossa barra de busca e o nosso sistema identifica se o link é falso ou verdadeiro. E Também implementamos a funcionalidade onde agora é póssivel visualizar o ranking do nosso quiz. E por fim fizemos atualizações do ambiente de versionamento, adicionamos um novo screencast do sistema em funcionamento e outro screencast da execução dos testes, issue / bug tracker atualizado no GitHub com registros no README e implementação de testes automatizados.
 
 ### Itens Entregues:
-*   **Implementação de +2 histórias do usuário**: 
-    - **Visualização do Ranking**: Interface aonde o usuário pode acompanhar o desempenho dele no quiz e comparar-se com outros usuários.
+*   **Implementação de +3 histórias do usuário**: 
     - **Verificação de links**: Sistema que permite que o usuário insira um link, para saber se aquele site é verdadeiro ou falso.
+    - **Registro de Denúncias**: Interface para que o usuário possa relatar crimes cibernéticos com título e descrição detalhada.
+    - **Visualização de Denúncias**: Central onde o usuário pode consultar todos os relatos registrados no sistema, com data e hora.
        
 *   **Screencast da execução dos testes**: Vídeo mostrando a validação das novas histórias de usuário e testes de navegação.
 *   **Issue / bug tracker atualizado**: Registro e acompanhamento de melhorias diretamente no GitHub.
