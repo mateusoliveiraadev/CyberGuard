@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CyberguardApplication<cyberguard>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cyberguard.cyberguard.CyberguardApplication",
+            "projectName": "cyberguard",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
