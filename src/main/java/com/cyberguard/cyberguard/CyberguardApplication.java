@@ -13,4 +13,4 @@ public class CyberguardApplication {
     public static void main(String[] args) {
         SpringApplication.run(CyberguardApplication.class, args);
     }
-}   
+}
