@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cyberguard.cyberguard.entity.Certificado;
 import com.cyberguard.cyberguard.entity.ProgressoAula;
+import com.cyberguard.cyberguard.repository.CertificadoRepository;
 import com.cyberguard.cyberguard.repository.ProgressoAulaRepository;
 
 @RestController
@@ -18,9 +20,12 @@ import com.cyberguard.cyberguard.repository.ProgressoAulaRepository;
 public class ProgressoAulaController {
 
     private final ProgressoAulaRepository repository;
+    private final CertificadoRepository certificadoRepository;
 
-    public ProgressoAulaController(ProgressoAulaRepository repository) {
+    // Injeção de dependências dos dois repositórios
+    public ProgressoAulaController(ProgressoAulaRepository repository, CertificadoRepository certificadoRepository) {
         this.repository = repository;
+        this.certificadoRepository = certificadoRepository;
     }
 
     @PostMapping("/concluir")
@@ -34,6 +39,23 @@ public class ProgressoAulaController {
             progresso.setEmailUsuario(email);
             progresso.setVideoId(videoId);
             repository.save(progresso);
+
+            // Regra de Negócio: Emitir certificado a cada 5 vídeos
+            long totalVideosAssistidos = repository.countByEmailUsuario(email);
+            
+            if (totalVideosAssistidos > 0 && totalVideosAssistidos % 5 == 0) {
+                long numeroCertificado = totalVideosAssistidos / 5;
+                String nomeDoCertificado = "Certificado " + numeroCertificado;
+
+                // Verifica se o certificado já existe para evitar duplicados
+                if (!certificadoRepository.existsByEmailUsuarioAndNome(email, nomeDoCertificado)) {
+                    Certificado novoCertificado = new Certificado();
+                    novoCertificado.setEmailUsuario(email);
+                    novoCertificado.setNome(nomeDoCertificado);
+                    certificadoRepository.save(novoCertificado);
+                }
+            }
+
             return ResponseEntity.ok("Progresso salvo com sucesso!");
         }
 
