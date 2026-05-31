@@ -8,4 +8,6 @@ import com.cyberguard.cyberguard.entity.ProgressoAula;
 @Repository
 public interface ProgressoAulaRepository extends JpaRepository<ProgressoAula, Long> {
     boolean existsByEmailUsuarioAndVideoId(String emailUsuario, String videoId);
+    
+    long countByEmailUsuario(String emailUsuario);
 }
