@@ -7,3 +7,6 @@ Content-Type: application/json
   "conteudo": "Este é um post de teste automatizado para verificar o funcionamento do novo fórum do CyberGuard!",
   "autorId": 1
 }
+
+### Listar todas as postagens da Comunidade
+GET http://localhost:9000/api/postagens

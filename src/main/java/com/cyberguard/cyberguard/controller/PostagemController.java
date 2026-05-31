@@ -5,14 +5,16 @@ import com.cyberguard.cyberguard.entity.Usuario;
 import com.cyberguard.cyberguard.repository.PostagemRepository;
 import com.cyberguard.cyberguard.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/postagens")
-@CrossOrigin(origins = "*") // Permite que o frontend acesse sem problemas de CORS
+@CrossOrigin(origins = "*")
 public class PostagemController {
 
     @Autowired
@@ -21,15 +23,24 @@ public class PostagemController {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    // Endpoint focado puramente em salvar uma nova postagem
+    // 🆕 NOVO ENDPOINT: Listar todas as postagens (da mais recente para a mais antiga)
+    @GetMapping
+    public ResponseEntity<List<Postagem>> listarPostagens() {
+        try {
+            // Buscando e ordenando decrescentemente pela data de criação
+            List<Postagem> postagens = postagemRepository.findAll(Sort.by(Sort.Direction.DESC, "dataCriacao"));
+            return ResponseEntity.ok(postagens);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(null);
+        }
+    }
+
     @PostMapping
     public ResponseEntity<?> criarPostagem(@RequestBody Map<String, Object> payload) {
         try {
             String conteudo = (String) payload.get("conteudo");
-            // Para simplificar esta etapa, pegamos o ID do autor enviado pelo front
             Long autorId = Long.valueOf(payload.get("autorId").toString());
 
-            // Verifica se o usuário que está postando realmente existe no banco
             Usuario autor = usuarioRepository.findById(autorId)
                     .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
 

@@ -19,20 +19,35 @@ public class Postagem {
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario autor;
 
-    
     public Postagem() {
         this.dataCriacao = LocalDateTime.now();
     }
 
-    
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getConteudo() { return conteudo; }
-    public void setConteudo(String conteudo) { this.conteudo = conteudo; }
+    public String getConteudo() {
+        return conteudo;
+    }
 
-    public LocalDateTime getDataCriacao() { return dataCriacao; }
-    public void setDataCriacao(LocalDateTime dataCriacao) { this.dataCriacao = dataCriacao; }
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
 
-    public Usuario getAutor() { return autor; }
-    public void setAutor(Usuario autor) { this.autor = autor; }
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public Usuario getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Usuario autor) {
+        this.autor = autor;
+    }
 }
