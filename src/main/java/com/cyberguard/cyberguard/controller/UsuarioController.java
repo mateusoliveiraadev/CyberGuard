@@ -33,4 +33,9 @@ public class UsuarioController {
         service.login("vinicius@email.com", "123");
         return "logado";
     }
+    @GetMapping("/buscar")
+    public Usuario buscar(@RequestParam String email) {
+        return service.buscarPorEmail(email);
+    }
+}
 }
