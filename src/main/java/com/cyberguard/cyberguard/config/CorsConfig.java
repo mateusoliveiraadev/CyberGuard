@@ -9,13 +9,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Libera para todos os endpoints
-                .allowedOrigins(
-                    "http://localhost:5173", // Seu front local
-                    "https://cyber-guard-frontend.vercel.app" // Seu front na Vercel
-                )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
-                .allowedHeaders("*")
-                .allowCredentials(true);
-    }
+        registry.addMapping("/**")
+            .allowedOrigins("https://cyber-guard-frontend.vercel.app") 
+            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD") // Garanta que OPTIONS está aqui
+            .allowedHeaders("*")
+            .allowCredentials(true)
+            .maxAge(3600); // Adicione o tempo de cache para o preflight
+}
 }
