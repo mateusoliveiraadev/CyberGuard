@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ import com.cyberguard.cyberguard.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/api/progresso")
-@CrossOrigin(origins = "*") 
+// 👇 APAGAMOS A LINHA DO @CrossOrigin DAQUI! 👇
 public class ProgressoAulaController {
 
     private final ProgressoAulaRepository repository;

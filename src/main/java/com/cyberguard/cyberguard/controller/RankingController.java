@@ -3,10 +3,9 @@ package com.cyberguard.cyberguard.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam; // <-- IMPORTANTE ADICIONAR ISSO
+import org.springframework.web.bind.annotation.RequestParam; 
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cyberguard.cyberguard.entity.RankingDTO;
@@ -15,7 +14,7 @@ import com.cyberguard.cyberguard.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/ranking")
-@CrossOrigin(origins = "http://localhost:5173") 
+// 👇 APAGAMOS A LINHA DO @CrossOrigin DAQUI! 👇
 public class RankingController {
 
     private final UsuarioRepository usuarioRepository;

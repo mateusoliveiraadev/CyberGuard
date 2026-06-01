@@ -1,12 +1,16 @@
 package com.cyberguard.cyberguard.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.cyberguard.cyberguard.entity.Usuario;
 import com.cyberguard.cyberguard.service.UsuarioService;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin(origins = "*") 
 public class UsuarioController {
     private final UsuarioService service;
 

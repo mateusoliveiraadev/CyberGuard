@@ -3,7 +3,6 @@ package com.cyberguard.cyberguard.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,7 @@ import com.cyberguard.cyberguard.repository.CertificadoRepository;
 
 @RestController
 @RequestMapping("/api/certificados")
-@CrossOrigin(origins = "*")
+// 👇 APAGAMOS A LINHA DO @CrossOrigin DAQUI! 👇
 public class CertificadoController {
 
     private final CertificadoRepository repository;

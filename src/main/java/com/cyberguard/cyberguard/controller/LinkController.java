@@ -2,7 +2,6 @@ package com.cyberguard.cyberguard.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +11,7 @@ import com.cyberguard.cyberguard.entity.LinkRequest;
 import com.cyberguard.cyberguard.entity.LinkResponse;
 import com.cyberguard.cyberguard.service.LinkService;
 
-@CrossOrigin(origins = "http://localhost:5173")
+// 👇 APAGAMOS A LINHA DO @CrossOrigin DAQUI! 👇
 @RestController
 @RequestMapping("/links")
 public class LinkController {

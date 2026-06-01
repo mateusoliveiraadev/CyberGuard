@@ -2,7 +2,6 @@ package com.cyberguard.cyberguard.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +14,7 @@ import com.cyberguard.cyberguard.service.QuizService;
 
 @RestController
 @RequestMapping("/quiz")
-@CrossOrigin(origins = "http://localhost:5173")
+// 👇 Apagamos a linha do @CrossOrigin daqui!
 public class QuizController {
 
     private final QuizService service;
