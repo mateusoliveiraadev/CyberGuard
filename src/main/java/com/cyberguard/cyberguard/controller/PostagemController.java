@@ -1,58 +1,58 @@
 package com.cyberguard.cyberguard.controller;
 
 import com.cyberguard.cyberguard.entity.Postagem;
-import com.cyberguard.cyberguard.entity.Usuario;
-import com.cyberguard.cyberguard.repository.PostagemRepository;
-import com.cyberguard.cyberguard.repository.UsuarioRepository;
+import com.cyberguard.cyberguard.service.PostagemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/postagens")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PostagemController {
 
-    @Autowired
-    private PostagemRepository postagemRepository;
+    private final PostagemService service;
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    public PostagemController(PostagemService service) {
+        this.service = service;
+    }
 
-    // 🆕 NOVO ENDPOINT: Listar todas as postagens (da mais recente para a mais antiga)
+    // 🔍 1. ROTA PARA LISTAR TODAS AS POSTAGENS (FÓRUM/COMUNIDADE)
     @GetMapping
-    public ResponseEntity<List<Postagem>> listarPostagens() {
+    public ResponseEntity<List<Postagem>> listarTodas() {
+        List<Postagem> postagens = service.listarTodas();
+        return ResponseEntity.ok(postagens);
+    }
+
+    // 💾 2. ROTA PARA CRIAR UMA NOVA POSTAGEM
+    @PostMapping
+    public ResponseEntity<Postagem> criarPostagem(@RequestBody Postagem postagem) {
+        Postagem novaPostagem = service.salvar(postagem);
+        return ResponseEntity.ok(novaPostagem);
+    }
+
+    // 📝 3. ROTA PARA EDITAR UMA POSTAGEM EXISTENTE
+    @PutMapping("/{id}")
+    public ResponseEntity<?> editarPostagem(@PathVariable Long id, @RequestBody Postagem postagemAtualizada) {
         try {
-            // Buscando e ordenando decrescentemente pela data de criação
-            List<Postagem> postagens = postagemRepository.findAll(Sort.by(Sort.Direction.DESC, "dataCriacao"));
-            return ResponseEntity.ok(postagens);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(null);
+            Postagem salva = service.atualizar(id, postagemAtualizada);
+            return ResponseEntity.ok(salva);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
         }
     }
 
-    @PostMapping
-    public ResponseEntity<?> criarPostagem(@RequestBody Map<String, Object> payload) {
+    // ❌ 4. ROTA PARA DELETAR UMA POSTAGEM
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deletarPostagem(@PathVariable Long id) {
         try {
-            String conteudo = (String) payload.get("conteudo");
-            Long autorId = Long.valueOf(payload.get("autorId").toString());
-
-            Usuario autor = usuarioRepository.findById(autorId)
-                    .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
-
-            Postagem novaPostagem = new Postagem();
-            novaPostagem.setConteudo(conteudo);
-            novaPostagem.setAutor(autor);
-
-            Postagem postagemSalva = postagemRepository.save(novaPostagem);
-
-            return ResponseEntity.ok(postagemSalva);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro ao criar postagem: " + e.getMessage());
+            service.deletar(id);
+            return ResponseEntity.ok().body("Postagem deletada com sucesso!");
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
         }
     }
 }
