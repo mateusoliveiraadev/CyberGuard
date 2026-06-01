@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam; // 👈 O IMPORT QUE FALTAVA AQUI!
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cyberguard.cyberguard.entity.Usuario;
@@ -33,9 +34,9 @@ public class UsuarioController {
         service.login("vinicius@email.com", "123");
         return "logado";
     }
+
     @GetMapping("/buscar")
     public Usuario buscar(@RequestParam String email) {
         return service.buscarPorEmail(email);
     }
-}
 }
