@@ -1,16 +1,24 @@
-@Bean
-public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    http
-        .cors().configurationSource(request -> {
-            var cors = new org.springframework.web.cors.CorsConfiguration();
-            cors.setAllowedOrigins(java.util.List.of("https://cyber-guard-frontend.vercel.app"));
-            cors.setAllowedMethods(java.util.List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-            cors.setAllowedHeaders(java.util.List.of("*"));
-            cors.setAllowCredentials(true);
-            return cors;
-        })
-        .and()
-        .csrf().disable()
-        .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
-    return http.build();
+package com.cyberguard.cyberguard.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class SecurityConfig {
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**")
+                        .allowedOrigins("*") // Permite que a Vercel e o localhost acessem o Java
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
+                        .allowedHeaders("*")
+                        .exposedHeaders("*");
+            }
+        };
+    }
 }
