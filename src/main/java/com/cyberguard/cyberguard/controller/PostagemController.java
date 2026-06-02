@@ -18,7 +18,6 @@ import com.cyberguard.cyberguard.service.PostagemService;
 
 @RestController
 @RequestMapping("/api/postagens")
-// 👇 APAGAMOS A LINHA DO @CrossOrigin DAQUI! 👇
 public class PostagemController {
 
     private final PostagemService service;
@@ -53,12 +52,13 @@ public class PostagemController {
         }
     }
 
-    // ❌ 4. ROTA PARA DELETAR UMA POSTAGEM
+    // ❌ 4. ROTA PARA DELETAR UMA POSTAGEM (CORRIGIDA)
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deletarPostagem(@PathVariable Long id) {
         try {
             service.deletar(id);
-            return ResponseEntity.ok().body("Postagem deletada com sucesso!");
+            // 🟢 Modificado aqui: Retorna status 204 No Content sem texto puro para não travar o Front!
+            return ResponseEntity.noContent().build();
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();
         }
