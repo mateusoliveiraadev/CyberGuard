@@ -139,7 +139,7 @@ resultados obtidos.
 
 # Prompt-01-criação-projeto.md:
 
-### Projeto Inicial:
+### Projeto Inicial
 
 ### Versão 1:
 Para desenvolver um projeto usando java com spring boot! onde o intuito é 
@@ -170,7 +170,7 @@ Foi definida uma estrutura mais adequada para o crescimento do projeto.
 
 # Prompt-02-arquitetura.md:
 
-### Arquitetura Definida:
+### Arquitetura Definida
 
 ### Versão 1:
 tlgd o projeto que eu comecei aqui ctg, de calculator? tava usando java 
@@ -199,7 +199,7 @@ Com frontend separado consumindo API REST.
 
 # Prompt-03-verificador-de-links.md:
 
-### Implementação do Verificador de Links:
+### Implementação do Verificador de Links
 
 ### Versão 1:
 quero implementar esse user no meu projeto
@@ -234,7 +234,7 @@ Os resultados foram comparados aos critérios de aceitação da user story.
 
 # Prompt-04-git-e-deploy.md:
 
-### GitHub e Resolução de Conflitos:
+### GitHub e Resolução de Conflitos
 
 ### Versão 1:
 git status
@@ -260,3 +260,30 @@ Foi possível:
 
 # Prompt-05-integração-frontend.md:
 
+### Integração Frontend e Backend
+
+### Versão 1:
+pra integrar com um front é muito complicado??
+
+### Resultado:
+A IA explicou conceitos gerais de integração.
+
+### Limitação Encontrada:
+A resposta era muito genérica para aplicação direta no projeto.
+
+### Versão Refinada:
+Mostre como integrar um frontend React com endpoints REST criados em 
+Spring Boot utilizando fetch.
+
+### Resultado Obtido:
+A equipe recebeu exemplos práticos de requisições HTTP para:
+- cadastro de usuários;
+- login;
+- comunicação frontend/backend.
+  
+### Validação:
+A integração foi testada por meio de chamadas aos endpoints da aplicação.
+
+---
+
+# Prompt-06-consumo-api.md:
