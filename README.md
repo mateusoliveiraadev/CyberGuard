@@ -195,3 +195,36 @@ Service
 Repository
 Com frontend separado consumindo API REST.
 
+# Prompt-03-verificador-de-links.md
+
+### Implementação do Verificador de Links:
+
+### Versão 1:
+quero implementar esse user no meu projeto
+
+### Resultado:
+A IA gerou:
+- Controller
+- Service
+- DTOs
+- Integração frontend
+
+## Limitação Encontrada:
+A implementação precisou ser adaptada para a estrutura já existente do 
+projeto.
+
+## Versão Refinada:
+Quero implementar essa funcionalidade seguindo o padrão já utilizado no 
+CyberGuard e mantendo compatibilidade com a arquitetura atual.
+
+## Resultado Obtido:
+A funcionalidade foi integrada ao projeto respeitando a organização já 
+existente.
+
+## Validação:
+Foram realizados testes com:
+- links válidos;
+- links suspeitos;
+- links inválidos.
+Os resultados foram comparados aos critérios de aceitação da user story.
+
