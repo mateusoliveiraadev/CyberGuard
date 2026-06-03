@@ -139,31 +139,31 @@ resultados obtidos.
 
 ## Prompt-01-criação-projeto.md:
 
-## Projeto inicial:
+### Projeto inicial:
 
-### Versão 1
+### Versão 1:
 Para desenvolver um projeto usando java com spring boot! onde o intuito é 
 criar um app que simule uma comunidade voltada para cybersegurança! como 
 eu crio o projeto no vscode?
 
-### Resultado
+### Resultado:
 A IA explicou:
 - instalação do Java;
 - instalação das extensões;
 - utilização do Spring Initializr;
 - dependências iniciais.
   
-### Limitação Encontrada
+### Limitação Encontrada:
 A resposta focava apenas na criação do projeto.
 Não detalhava uma arquitetura adequada para suportar a evolução da 
 aplicação.
 
-### Versão Refinada
+### Versão Refinada:
 Além da criação do projeto, defina uma arquitetura em camadas utilizando 
 Controller, Service, Repository e entidades adequadas para uma comunidade 
 de conscientização digital.
 
-## Resultado Obtido
+## Resultado Obtido:
 Foi definida uma estrutura mais adequada para o crescimento do projeto.
 ---
 ### Prompt-02-arquitetura.md
