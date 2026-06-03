@@ -119,7 +119,7 @@ Foi gravado um vídeo executando alguns testes dentro do protótipo
 ▶️ Assistir no Youtube: https://youtu.be/BMfXCID5HsY?si=WMAuHpApmhG0RR_7
 
 
-## Cadeia de Prompts
+# Cadeia de Prompts
 
 Repositório de Prompts - CyberGuard
 Este repositório reúne os principais prompts utilizados durante o 
@@ -137,9 +137,9 @@ obtidos, seguindo um processo iterativo de validação pela equipe.
 Cada arquivo apresenta o prompt utilizado, os ajustes realizados e os 
 resultados obtidos.
 
-### Prompt-01-criação-projeto.md:
+## Prompt-01-criação-projeto.md:
 
-### Início do Projeto
+### Projeto inicial
 
 ## Versão 1
 Para desenvolver um projeto usando java com spring boot! onde o intuito é 
