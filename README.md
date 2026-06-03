@@ -148,10 +148,10 @@ eu crio o projeto no vscode?
 
 ### Resultado:
 A IA explicou:
-- instalação do Java;
-- instalação das extensões;
-- utilização do Spring Initializr;
-- dependências iniciais.
+- Instalação do Java;
+- Instalação das extensões;
+- Utilização do Spring Initializr;
+- Dependências iniciais.
   
 ### Limitação Encontrada:
 A resposta focava apenas na criação do projeto.
@@ -224,9 +224,9 @@ existente.
 
 ### Validação:
 Foram realizados testes com:
-- links válidos;
-- links suspeitos;
-- links inválidos.
+- Links válidos;
+- Links suspeitos;
+- Links inválidos.
 Os resultados foram comparados aos critérios de aceitação da user story.
 
 ---
@@ -250,10 +250,10 @@ necessários para concluir o merge.
 
 ### Resultado Obtido:
 Foi possível:
-- resolver conflitos;
-- realizar commit;
-- realizar push para o GitHub;
-- atualizar o repositório do projeto.
+- Resolver conflitos;
+- Realizar commit;
+- Realizar push para o GitHub;
+- Atualizar o repositório do projeto.
 
 ---
 
@@ -276,9 +276,9 @@ Spring Boot utilizando fetch.
 
 ### Resultado Obtido:
 A equipe recebeu exemplos práticos de requisições HTTP para:
-- cadastro de usuários;
-- login;
-- comunicação frontend/backend.
+- Cadastro de usuários;
+- Login;
+- Comunicação frontend/backend.
   
 ### Validação:
 A integração foi testada por meio de chamadas aos endpoints da aplicação.
@@ -287,7 +287,7 @@ A integração foi testada por meio de chamadas aos endpoints da aplicação.
 
 # Prompt-06-consumo-api.md
 
-# Consumo de API pelo Frontend
+### Consumo de API pelo Frontend
 
 ### Versão 1:
 Como faço para o frontend acessar os dados do backend?
@@ -314,7 +314,7 @@ retorno correto dos dados.
 
 # Prompt-07-login-frontend.md
 
-# Integração da Tela de Login
+### Integração da Tela de Login
 
 ### Versão 1:
 Como faço login usando spring boot e react?
@@ -416,4 +416,5 @@ frontend e backend.
 ### Validação:
 A equipe testou o fluxo completo da aplicação, confirmando a comunicação 
 correta entre interface, API e banco de dados.
+
 ---
