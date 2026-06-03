@@ -139,7 +139,7 @@ resultados obtidos.
 
 # Prompt-01-criação-projeto.md:
 
-### Projeto inicial:
+### Projeto Inicial:
 
 ### Versão 1:
 Para desenvolver um projeto usando java com spring boot! onde o intuito é 
