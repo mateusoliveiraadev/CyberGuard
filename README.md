@@ -118,6 +118,25 @@ Foi gravado um vídeo executando alguns testes dentro do protótipo
 
 ▶️ Assistir no Youtube: https://youtu.be/BMfXCID5HsY?si=WMAuHpApmhG0RR_7
 
-# Cadeia de Prompts
+
+## Cadeia de Prompts
+
+Repositório de Prompts - CyberGuard
+Este repositório reúne os principais prompts utilizados durante o 
+desenvolvimento do projeto CyberGuard.
+Os prompts foram utilizados como apoio para:
+
+- Definição da arquitetura da aplicação;
+- Implementação de funcionalidades;
+- Integração entre frontend e backend;
+- Resolução de conflitos de versionamento;
+- Apoio no desenvolvimento com Java Spring Boot.
+
+Os prompts foram refinados ao longo do projeto conforme os resultados 
+obtidos, seguindo um processo iterativo de validação pela equipe.
+Cada arquivo apresenta o prompt utilizado, os ajustes realizados e os 
+resultados obtidos.
+
+prompt-01
 
 
