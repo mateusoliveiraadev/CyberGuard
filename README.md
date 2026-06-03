@@ -170,7 +170,7 @@ Foi definida uma estrutura mais adequada para o crescimento do projeto.
 
 # Prompt-02-arquitetura.md
 
-### Definição da Arquitetura:
+### Arquitetura Definida:
 
 ### Versão 1:
 tlgd o projeto que eu comecei aqui ctg, de calculator? tava usando java 
@@ -178,7 +178,8 @@ spring e react. isso é mvc?
 
 ### Resultado:
 A IA explicou conceitos de MVC e arquitetura em camadas.
-## Limitação Encontrada
+
+### Limitação Encontrada:
 A equipe precisava entender especificamente como aplicar esses conceitos 
 ao CyberGuard.
 
