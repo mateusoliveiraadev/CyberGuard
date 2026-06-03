@@ -195,6 +195,8 @@ Service
 Repository
 Com frontend separado consumindo API REST.
 
+---
+
 # Prompt-03-verificador-de-links.md
 
 ### Implementação do Verificador de Links:
@@ -227,4 +229,30 @@ Foram realizados testes com:
 - links suspeitos;
 - links inválidos.
 Os resultados foram comparados aos critérios de aceitação da user story.
+
+---
+
+# Prompt-04-git-e-deploy.md
+
+### GitHub e Resolução de Conflitos
+
+### Versão 1
+git status
+
+### Resultado
+A IA identificou conflito de merge.
+
+### Limitação Encontrada
+A equipe não possuía experiência prévia na resolução de conflitos.
+
+### Versão Refinada
+Analise o conflito presente no application.properties e indique os passos 
+necessários para concluir o merge.
+
+### Resultado Obtido
+Foi possível:
+- resolver conflitos;
+- realizar commit;
+- realizar push para o GitHub;
+- atualizar o repositório do projeto.
 
