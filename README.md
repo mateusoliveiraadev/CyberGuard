@@ -137,6 +137,33 @@ obtidos, seguindo um processo iterativo de validação pela equipe.
 Cada arquivo apresenta o prompt utilizado, os ajustes realizados e os 
 resultados obtidos.
 
-### Prompt-01
+### Prompt-01-criação-projeto.md:
+# Criação Inicial do Projeto
+## Versão 1
+pra desenvolver um projeto usando java com spring boot! onde o intuito é 
+criar um app que simule uma comunidade voltada para cybersegurança! como 
+eu crio o projeto no vscode?
+
+## Resultado
+A IA explicou:
+- instalação do Java;
+- instalação das extensões;
+- utilização do Spring Initializr;
+- dependências iniciais.
+  
+## Limitação Encontrada
+A resposta focava apenas na criação do projeto.
+Não detalhava uma arquitetura adequada para suportar a evolução da 
+aplicação.
+
+## Versão Refinada
+Além da criação do projeto, defina uma arquitetura em camadas utilizando 
+Controller, Service, Repository e entidades adequadas para uma comunidade 
+de conscientização digital.
+
+## Resultado Obtido
+Foi definida uma estrutura mais adequada para o crescimento do projeto.
+---
+### Prompt-02-arquitetura.md
 
 
