@@ -137,7 +137,7 @@ obtidos, seguindo um processo iterativo de validação pela equipe.
 Cada arquivo apresenta o prompt utilizado, os ajustes realizados e os 
 resultados obtidos.
 
-# Prompt-01-criação-projeto.md:
+# Prompt-01-criação-projeto.md
 
 ### Projeto Inicial
 
@@ -168,13 +168,12 @@ Foi definida uma estrutura mais adequada para o crescimento do projeto.
 
 ---
 
-# Prompt-02-arquitetura.md:
+# Prompt-02-arquitetura.md
 
 ### Arquitetura Definida
 
 ### Versão 1:
-tlgd o projeto que eu comecei aqui ctg, de calculator? tava usando java 
-spring e react. isso é mvc?
+Tava fazendo um projeto contigo, de calculadora, lembra? nesse projeto tava usando Java Spring e React. isso é MVC?
 
 ### Resultado:
 A IA explicou conceitos de MVC e arquitetura em camadas.
@@ -197,12 +196,12 @@ Com frontend separado consumindo API REST.
 
 ---
 
-# Prompt-03-verificador-de-links.md:
+# Prompt-03-verificador-de-links.md
 
 ### Implementação do Verificador de Links
 
 ### Versão 1:
-quero implementar esse user no meu projeto
+Quero implementar esse user no meu projeto
 
 ### Resultado:
 A IA gerou:
@@ -232,12 +231,12 @@ Os resultados foram comparados aos critérios de aceitação da user story.
 
 ---
 
-# Prompt-04-git-e-deploy.md:
+# Prompt-04-git-e-deploy.md
 
 ### GitHub e Resolução de Conflitos
 
 ### Versão 1:
-git status
+Git status
 
 ### Resultado:
 A IA identificou conflito de merge.
@@ -258,12 +257,12 @@ Foi possível:
 
 ---
 
-# Prompt-05-integração-frontend.md:
+# Prompt-05-integração-frontend.md
 
 ### Integração Frontend e Backend
 
 ### Versão 1:
-pra integrar com um front é muito complicado??
+Para integrar com um front é muito complicado??
 
 ### Resultado:
 A IA explicou conceitos gerais de integração.
@@ -286,4 +285,135 @@ A integração foi testada por meio de chamadas aos endpoints da aplicação.
 
 ---
 
-# Prompt-06-consumo-api.md:
+# Prompt-06-consumo-api.md
+
+# Consumo de API pelo Frontend
+
+### Versão 1:
+Como faço para o frontend acessar os dados do backend?
+
+### Resultado:
+A IA explicou o conceito de requisições HTTP.
+
+### Limitação Encontrada:
+A resposta não apresentava um exemplo diretamente aplicável ao projeto.
+
+### Versão Refinada:
+Mostre um exemplo utilizando fetch para consumir endpoints REST criados 
+em Spring Boot.
+
+### Resultado Obtido
+A IA gerou exemplos de requisições GET e POST compatíveis com os 
+endpoints da aplicação.
+
+### Validação
+A equipe testou as requisições diretamente pelo navegador e verificou o 
+retorno correto dos dados.
+
+---
+
+# Prompt-07-login-frontend.md
+
+# Integração da Tela de Login
+
+### Versão 1:
+Como faço login usando spring boot e react?
+
+### Resultado:
+A IA apresentou apenas conceitos gerais sobre autenticação.
+
+### Limitação Encontrada:
+A solução não demonstrava como enviar os dados do formulário para a API.
+
+### Versão Refinada:
+Crie um exemplo de tela de login utilizando fetch para enviar email e 
+senha para um endpoint Spring Boot.
+
+### Resultado Obtido:
+A IA gerou um exemplo funcional de integração entre frontend e backend.
+
+### Validação:
+Foram realizados testes de autenticação utilizando usuários cadastrados 
+na aplicação.
+
+---
+
+# Prompt-08-cors.md
+
+### Configuração de CORS
+
+### Versão 1:
+O Frontend não consegue acessar meu backend
+
+### Resultado:
+A IA apontou possíveis problemas de comunicação entre as aplicações.
+
+### Limitação Encontrada:
+A causa específica do erro não foi identificada inicialmente.
+
+### Versão Refinada:
+Meu frontend React está rodando em uma porta diferente do backend Spring 
+Boot. Como configurar o CORS?
+
+### Resultado Obtido:
+A IA sugeriu a utilização da anotação @CrossOrigin e explicou sua 
+configuração.
+
+### Validação:
+Após a alteração, as requisições passaram a ser aceitas normalmente pelo 
+backend.
+
+---
+
+# Prompt-09-cadastro-usuarios.md
+
+### Cadastro de Usuários
+
+### Versão 1:
+Como cadastrar usuarios no sistema?
+
+### Resultado:
+A IA gerou uma implementação simples.
+
+### Limitação Encontrada:
+A solução não seguia totalmente a arquitetura adotada pela equipe.
+
+### Versão Refinada:
+Implemente um cadastro de usuários seguindo a arquitetura Controller, 
+Service e Repository do Spring Boot.
+
+### Resultado Obtido:
+A IA gerou uma estrutura compatível com a organização do projeto.
+
+### Validação:
+Os dados cadastrados foram persistidos corretamente no banco de dados 
+PostgreSQL.
+
+
+---
+
+# Prompt-10-integracao-completa.md
+
+### Integração Completa Frontend e Backend
+
+### Versão 1:
+Para integrar com um front é muito complicado?
+
+### Resultado:
+A IA explicou de forma conceitual como ocorre a integração.
+
+### Limitação Encontrada:
+A resposta não detalhava os passos necessários para implementação.
+
+### Versão Refinada:
+Explique passo a passo como um frontend pode consumir endpoints REST 
+desenvolvidos em Spring Boot utilizando JavaScript e fetch.
+
+### Resultado Obtido:
+A IA apresentou exemplos completos de envio e recebimento de dados entre 
+frontend e backend.
+
+### Validação:
+A equipe testou o fluxo completo da aplicação, confirmando a comunicação 
+correta entre interface, API e banco de dados.
+---
