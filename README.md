@@ -163,9 +163,11 @@ Além da criação do projeto, defina uma arquitetura em camadas utilizando
 Controller, Service, Repository e entidades adequadas para uma comunidade 
 de conscientização digital.
 
-## Resultado Obtido:
+### Resultado Obtido:
 Foi definida uma estrutura mais adequada para o crescimento do projeto.
+
 ---
+
 ### Prompt-02-arquitetura.md
 
 
