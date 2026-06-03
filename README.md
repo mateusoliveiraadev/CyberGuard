@@ -168,7 +168,7 @@ Foi definida uma estrutura mais adequada para o crescimento do projeto.
 
 ---
 
-# Prompt-02-arquitetura.md
+# Prompt-02-arquitetura.md:
 
 ### Arquitetura Definida:
 
@@ -197,7 +197,7 @@ Com frontend separado consumindo API REST.
 
 ---
 
-# Prompt-03-verificador-de-links.md
+# Prompt-03-verificador-de-links.md:
 
 ### Implementação do Verificador de Links:
 
@@ -232,27 +232,31 @@ Os resultados foram comparados aos critérios de aceitação da user story.
 
 ---
 
-# Prompt-04-git-e-deploy.md
+# Prompt-04-git-e-deploy.md:
 
-### GitHub e Resolução de Conflitos
+### GitHub e Resolução de Conflitos:
 
-### Versão 1
+### Versão 1:
 git status
 
-### Resultado
+### Resultado:
 A IA identificou conflito de merge.
 
-### Limitação Encontrada
+### Limitação Encontrada:
 A equipe não possuía experiência prévia na resolução de conflitos.
 
-### Versão Refinada
+### Versão Refinada:
 Analise o conflito presente no application.properties e indique os passos 
 necessários para concluir o merge.
 
-### Resultado Obtido
+### Resultado Obtido:
 Foi possível:
 - resolver conflitos;
 - realizar commit;
 - realizar push para o GitHub;
 - atualizar o repositório do projeto.
+
+---
+
+# Prompt-05-integração-frontend.md:
 
