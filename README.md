@@ -137,7 +137,7 @@ obtidos, seguindo um processo iterativo de validação pela equipe.
 Cada arquivo apresenta o prompt utilizado, os ajustes realizados e os 
 resultados obtidos.
 
-## Prompt-01-criação-projeto.md:
+# Prompt-01-criação-projeto.md:
 
 ### Projeto inicial:
 
@@ -168,6 +168,6 @@ Foi definida uma estrutura mais adequada para o crescimento do projeto.
 
 ---
 
-### Prompt-02-arquitetura.md
+# Prompt-02-arquitetura.md
 
 
