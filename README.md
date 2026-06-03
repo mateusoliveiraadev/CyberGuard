@@ -209,19 +209,19 @@ A IA gerou:
 - DTOs
 - Integração frontend
 
-## Limitação Encontrada:
+### Limitação Encontrada:
 A implementação precisou ser adaptada para a estrutura já existente do 
 projeto.
 
-## Versão Refinada:
+### Versão Refinada:
 Quero implementar essa funcionalidade seguindo o padrão já utilizado no 
 CyberGuard e mantendo compatibilidade com a arquitetura atual.
 
-## Resultado Obtido:
+### Resultado Obtido:
 A funcionalidade foi integrada ao projeto respeitando a organização já 
 existente.
 
-## Validação:
+### Validação:
 Foram realizados testes com:
 - links válidos;
 - links suspeitos;
