@@ -118,4 +118,6 @@ Foi gravado um vídeo executando alguns testes dentro do protótipo
 
 ▶️ Assistir no Youtube: https://youtu.be/BMfXCID5HsY?si=WMAuHpApmhG0RR_7
 
+# Cadeia de Prompts
+
 
