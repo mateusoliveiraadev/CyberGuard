@@ -479,21 +479,22 @@ npm run dev
 Para rodar a aplicação na internet, utilizamos o Render (Backend) e a Vercel (Frontend).
 
 Passo A: Deploy do Backend no Render
-Conecte o repositório do seu Backend ao Render e crie um Web Service.
-
-Defina os comandos:
-
-Build Command: ./mvnw clean install -DskipTests
-
-Start Command: java -jar target/cyberguard-0.0.1-SNAPSHOT.jar
-
-Vá na aba Environment Variables e adicione as 7 variáveis listadas no passo 1.2:
-
-As 4 do banco de dados (DB_HOST, DB_NAME, DB_USER, DB_PASSWORD) com as suas credenciais.
-
-As 3 do projeto (GNEWS_API_KEY, YOUTUBE_API_KEY, YoutubeLIST_ID) com os valores exatos fornecidos acima.
-
-Salve e aguarde o build. Copie a URL gerada (ex: https://cyberguard-backend.onrender.com).
+Acesse www.render.com;
+clica em login;
+A seguir clicar em dashboard;
+Em seguida Clicar em Web service;
+Conecte o repositório do projeto que você quer implantar(se você não for o dono escolha a opção public repository);
+Coloque o link do reposítório do projeto no campo abaixo;
+Na tela seguinte, insira nome do projeto, selecione a linguagem ( Docker);
+selecione a branch que deseja que seja vigiada pelo render;
+Selecione a região preferida;
+Selecione a modalidade de conta;
+E insira as variáveis de ambiente para configuração:
+As 4 do banco de dados (DB_HOST, DB_NAME, DB_USER, DB_PASSWORD) com as suas credenciais;
+As 3 do projeto (GNEWS_API_KEY, YOUTUBE_API_KEY, YoutubeLIST_ID) com os valores exatos fornecidos acima;
+Clicar em deploy web;
+Salve e aguarde o build;
+Copie a URL gerada (ex: https://cyberguard-backend.onrender.com) no navegador
 
 Passo B: Deploy do Frontend na Vercel
 Importe o repositório do Frontend na Vercel.
