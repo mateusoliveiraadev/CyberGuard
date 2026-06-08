@@ -508,3 +508,7 @@ VITE_YT_API_KEY: AIzaSyDcNcgvmYx9hzY4h7isZ0or2s6cJeerd70
 VITE_YT_PLAYLIST_ID: PLhnExfBbbmAQrPacK4YEdVQbwBjyrXNzL
 
 Clique em Deploy.
+
+# Screencast Final
+▶️ Assistir no Youtube: https://youtu.be/lNib0yEegs0?si=Wnh5OloBaJ3HUu2X
+
